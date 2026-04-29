@@ -1,6 +1,7 @@
 @import url(normalize.css);
 @import url(reset.css); /* 불러온 거 */
 @import url(flex-utility.css);
+@import url(index.css);
 
 :root{
   /* Layout */
@@ -51,6 +52,9 @@ body{
 .text-heading-xl{
   font-size:55px;
   line-height: calc(var(--base-unit) * 3);
+  color: var(--hero--title);
+  text-transform: uppercase;
+  letter-spacing: 2%;
 }
 .text-heading-s{
   font-size: 24px;
@@ -59,6 +63,7 @@ body{
 .text-body-l {
   font-size: var(--body--l);
   line-height: calc(var(--base-unit) * 2);
+  font-weight: 300; /* ! light: 300 */
 }
 
 .text-body-m {
@@ -96,6 +101,10 @@ body{
 .btn-primary{
   background: var(--primary);
   color: var(--secondary);
+}
+.btn.big{
+  height: calc(var(--base-unit)*2);
+  padding: 0 30px;
 }
 
 /* 폼요소 */
