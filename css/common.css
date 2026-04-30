@@ -1,7 +1,6 @@
 @import url(normalize.css);
 @import url(reset.css); /* 불러온 거 */
 @import url(flex-utility.css);
-@import url(index.css);
 
 :root {
   /* Layout */
@@ -185,6 +184,9 @@ hr {
   text-decoration: underline;
   color: var(--primary);
 }
+section .header {
+  margin-bottom: calc(var(--base-unit) * 2);
+}
 
 /* 헤더 */
 body > header {
@@ -192,13 +194,7 @@ body > header {
   padding: var(--base-unit) 0;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
 }
-.logo span {
-  position: absolute;
-  clip-path: inset(50%);
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
+
 header nav ul {
   gap: 10px;
 }
@@ -216,6 +212,7 @@ header nav ul li:first-child {
 .slidecontainer {
   width: 300%; /* js 부모 너비파악, 슬라이드 개수 파악, 너비 계산 지정할 예정 */
   display: flex;
+  transition: 0.3s ease-out;
 }
 .slidecontainer li {
   display: flex;
@@ -223,6 +220,10 @@ header nav ul li:first-child {
   flex-direction: column;
   align-items: center;
   gap: var(--base-unit);
+}
+.slidecontainer li > p {
+  width: 700px;
+  text-align: center;
 }
 .sliderwrapper button {
   width: 45px;
@@ -236,10 +237,10 @@ header nav ul li:first-child {
   top: 50%;
   transform: translateY(-50%);
 }
-.testimonial button.prev {
+.slidewrapper button.prev {
   left: 0;
 }
-.testimonial button.next {
+.slidewrapper button.next {
   right: 0;
 }
 
